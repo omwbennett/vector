@@ -25,7 +25,6 @@ generated: components: sources: mqtt: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

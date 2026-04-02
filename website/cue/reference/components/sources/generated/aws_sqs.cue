@@ -178,7 +178,6 @@ generated: components: sources: aws_sqs: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

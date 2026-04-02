@@ -20,7 +20,6 @@ generated: components: sources: file_descriptor: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

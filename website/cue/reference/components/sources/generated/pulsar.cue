@@ -123,7 +123,6 @@ generated: components: sources: pulsar: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

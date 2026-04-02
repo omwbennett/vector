@@ -68,7 +68,6 @@ generated: components: sources: aws_kinesis_firehose: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

@@ -29,7 +29,6 @@ generated: components: sources: demo_logs: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true
