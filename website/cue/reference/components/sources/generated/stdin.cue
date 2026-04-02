@@ -20,7 +20,6 @@ generated: components: sources: stdin: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

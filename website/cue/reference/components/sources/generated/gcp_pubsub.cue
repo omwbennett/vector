@@ -96,7 +96,6 @@ generated: components: sources: gcp_pubsub: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

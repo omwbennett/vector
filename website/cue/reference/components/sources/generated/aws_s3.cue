@@ -183,7 +183,6 @@ generated: components: sources: aws_s3: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

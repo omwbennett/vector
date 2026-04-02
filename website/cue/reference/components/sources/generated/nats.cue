@@ -117,7 +117,6 @@ generated: components: sources: nats: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

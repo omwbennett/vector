@@ -50,7 +50,6 @@ generated: components: sources: datadog_agent: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true

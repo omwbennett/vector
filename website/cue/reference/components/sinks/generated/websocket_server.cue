@@ -597,7 +597,6 @@ generated: components: sinks: websocket_server: configuration: {
 																								* `Date`
 																								* `Decimal`
 																								* `Duration`
-																								* `Fixed`
 																								* `TimeMillis`
 																								"""
 										required: true

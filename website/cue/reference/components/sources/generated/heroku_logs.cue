@@ -93,7 +93,6 @@ generated: components: sources: heroku_logs: configuration: {
 																* `Date`
 																* `Decimal`
 																* `Duration`
-																* `Fixed`
 																* `TimeMillis`
 																"""
 						required: true
