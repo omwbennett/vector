@@ -94,7 +94,6 @@ pub struct AvroDeserializerOptions {
     /// * `Date`
     /// * `Decimal`
     /// * `Duration`
-    /// * `Fixed`
     /// * `TimeMillis`
     #[configurable(metadata(
         docs::examples = r#"{ "type": "record", "name": "log", "fields": [{ "name": "message", "type": "string" }] }"#,
@@ -190,7 +189,7 @@ pub fn try_from(value: AvroValue) -> vector_common::Result<VrlValue> {
             Ok(VrlValue::Array(vector))
         }
         AvroValue::Boolean(boolean) => Ok(VrlValue::from(boolean)),
-        AvroValue::Bytes(bytes) => Ok(VrlValue::from(bytes)),
+        AvroValue::Bytes(bytes) => Ok(VrlValue::Bytes(bytes::Bytes::from(bytes))),
         AvroValue::Date(_) => Err(vector_common::Error::from(
             "AvroValue::Date is not supported",
         )),
@@ -202,9 +201,7 @@ pub fn try_from(value: AvroValue) -> vector_common::Result<VrlValue> {
             "AvroValue::Duration is not supported",
         )),
         AvroValue::Enum(_, string) => Ok(VrlValue::from(string)),
-        AvroValue::Fixed(_, _) => Err(vector_common::Error::from(
-            "AvroValue::Fixed is not supported",
-        )),
+        AvroValue::Fixed(_, bytes) => Ok(VrlValue::Bytes(bytes::Bytes::from(bytes))),
         AvroValue::Float(float) => Ok(VrlValue::from_f64_or_zero(float as f64)),
         AvroValue::Int(int) => Ok(VrlValue::from(int)),
         AvroValue::Long(long) => Ok(VrlValue::from(long)),
