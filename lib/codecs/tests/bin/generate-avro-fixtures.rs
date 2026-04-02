@@ -142,7 +142,6 @@ fn generate_avro_test_case_string() -> Result<()> {
     generate_test_case(schema, value, "string")
 }
 
-#[allow(unused)]
 fn generate_avro_test_case_fixed() -> Result<()> {
     let schema = r#"
     {
@@ -490,6 +489,7 @@ fn main() -> Result<()> {
     generate_avro_test_case_bytes()?;
     generate_avro_test_case_double()?;
     generate_avro_test_case_enum()?;
+    generate_avro_test_case_fixed()?;
     generate_avro_test_case_float()?;
     generate_avro_test_case_int()?;
     generate_avro_test_case_long()?;

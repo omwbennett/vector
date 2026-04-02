@@ -1,3 +1,4 @@
+use apache_avro::{Schema, types::Value as AvroValue};
 use bytes::{BufMut, BytesMut};
 use serde::{Deserialize, Serialize};
 use tokio_util::codec::Encoder;
@@ -5,6 +6,38 @@ use vector_config::configurable_component;
 use vector_core::{config::DataType, event::Event, schema};
 
 use crate::encoding::BuildError;
+
+// Walks the Avro value tree alongside the schema and converts String -> Bytes wherever
+// the schema declares Fixed. This is necessary because VRL serializes Bytes fields via
+// serialize_str, producing AvroValue::String, which resolve_fixed cannot reliably coerce
+// for arbitrary binary data.
+fn coerce_for_schema(value: AvroValue, schema: &Schema) -> AvroValue {
+    match schema {
+        Schema::Fixed(_) => match value {
+            AvroValue::String(s) => AvroValue::Bytes(s.into_bytes()),
+            other => other,
+        },
+        Schema::Record(record_schema) => match value {
+            AvroValue::Map(mut map) => {
+                for field in &record_schema.fields {
+                    if let Some(v) = map.remove(&field.name) {
+                        map.insert(field.name.clone(), coerce_for_schema(v, &field.schema));
+                    }
+                }
+                AvroValue::Map(map)
+            }
+            other => other,
+        },
+        Schema::Union(union_schema) => match value {
+            AvroValue::Union(idx, inner) => AvroValue::Union(
+                idx,
+                Box::new(coerce_for_schema(*inner, &union_schema.variants()[idx as usize])),
+            ),
+            other => other,
+        },
+        _ => value,
+    }
+}
 
 /// Config used to build a `AvroSerializer`.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -71,6 +104,7 @@ impl Encoder<Event> for AvroSerializer {
     fn encode(&mut self, event: Event, buffer: &mut BytesMut) -> Result<(), Self::Error> {
         let log = event.into_log();
         let value = apache_avro::to_value(log)?;
+        let value = coerce_for_schema(value, &self.schema);
         let value = value.resolve(&self.schema)?;
         let bytes = apache_avro::to_avro_datum(&self.schema, value)?;
         buffer.put_slice(&bytes);
