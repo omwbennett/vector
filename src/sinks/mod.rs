@@ -53,6 +53,8 @@ pub mod doris;
 pub mod elasticsearch;
 #[cfg(feature = "sinks-file")]
 pub mod file;
+#[cfg(feature = "sinks-fluss")]
+pub mod fluss;
 #[cfg(feature = "sinks-gcp")]
 pub mod gcp;
 #[cfg(feature = "sinks-gcp-chronicle")]

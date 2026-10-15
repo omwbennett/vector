@@ -1,0 +1,51 @@
+# Native Fluss sink for log tables (tables without a primary key).
+# Build Vector with the sinks-fluss feature. Cargo fetches the pinned native client.
+# Input fields must match the table's actual types. Missing nullable fields are
+# null; missing required fields and invalid values are rejected.
+# DECIMAL accepts integers or plain decimal strings, without rounding.
+# TIME accepts milliseconds since midnight; timestamps accept Vector timestamps
+# or epoch milliseconds. Values must fit the column's declared precision.
+# ARRAY, MAP and ROW columns are currently rejected explicitly.
+
+sources:
+  input:
+    type: stdin
+    decoding:
+      codec: json
+
+sinks:
+  fluss:
+    type: fluss
+    inputs: [input]
+    bootstrap_servers: "127.0.0.1:9123"
+    database: fluss
+    table: events
+    schema_mode: auto
+    schema_refresh_interval_sec: 60
+    max_in_flight: 256
+    max_cached_tables: 128
+    buffer_wait_timeout_ms: 1000
+    request_timeout_ms: 60000
+    shutdown_timeout_ms: 30000
+
+# For dynamic routing, use table: "{{ .table }}" and table_field: table.
+# The routing field is removed after rendering the table name.
+# In manual mode, mappings select destination columns by name, in any order:
+# schema_mode: manual
+# columns:
+#   - from_field: .message
+#     to_column: body
+#     data_type: string
+# The table remains authoritative for lengths, precision and nullability.
+# Supply sasl_username and sasl_password together when authentication is enabled.
+#
+# For end-to-end acknowledgements, use a source that supports them and set
+# acknowledgements.enabled: true on this sink. The stdin example cannot acknowledge input.
+#
+# Native batching and retries are used after submission. Delivery is confirmed
+# only on server acknowledgement. A delivery timeout is reported as errored and
+# may have committed; replaying it upstream can produce duplicates. This sink
+# does not provide exactly-once delivery across restarts or unknown outcomes.
+# Cache rollover and observed schema changes drain and replace the native
+# connection. Pause ingestion for DDL: concurrent DDL and in-flight writes still
+# require schema pinning support in the native client for atomic safety.

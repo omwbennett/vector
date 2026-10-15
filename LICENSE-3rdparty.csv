@@ -33,6 +33,7 @@ arraydeque,https://github.com/andylokandy/arraydeque,MIT OR Apache-2.0,andylokan
 arrayvec,https://github.com/bluss/arrayvec,MIT OR Apache-2.0,bluss
 arrow,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
 arrow-arith,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
+arrow-array,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
 arrow-array,https://github.com/apache/arrow-rs,Apache-2.0 AND MIT,Apache Arrow <dev@arrow.apache.org>
 arrow-buffer,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
 arrow-cast,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
@@ -200,6 +201,7 @@ cpufeatures,https://github.com/RustCrypto/utils,MIT OR Apache-2.0,RustCrypto Dev
 crc,https://github.com/mrhooray/crc-rs,MIT OR Apache-2.0,"Rui Hu <code@mrhooray.com>, Akhil Velagapudi <4@4khil.com>"
 crc-catalog,https://github.com/akhilles/crc-catalog,MIT OR Apache-2.0,Akhil Velagapudi <akhilvelagapudi@gmail.com>
 crc-fast,https://github.com/awesomized/crc-fast-rust,MIT OR Apache-2.0,Don MacAskill
+crc32c,https://github.com/zowens/crc32c,Apache-2.0 OR MIT,Zack Owens
 crc32fast,https://github.com/srijs/rust-crc32fast,MIT OR Apache-2.0,"Sam Rijs <srijs@airpost.net>, Alex Crichton <alex@alexcrichton.com>"
 critical-section,https://github.com/rust-embedded/critical-section,MIT OR Apache-2.0,The critical-section Authors
 crossbeam-channel,https://github.com/crossbeam-rs/crossbeam,MIT OR Apache-2.0,The crossbeam-channel Authors
@@ -235,6 +237,7 @@ deadpool-runtime,https://github.com/deadpool-rs/deadpool,MIT OR Apache-2.0,Micha
 defmt,https://github.com/knurling-rs/defmt,MIT OR Apache-2.0,The Knurling-rs developers
 defmt-macros,https://github.com/knurling-rs/defmt,MIT OR Apache-2.0,The Knurling-rs developers
 defmt-parser,https://github.com/knurling-rs/defmt,MIT OR Apache-2.0,The Knurling-rs developers
+delegate,https://github.com/kobzol/rust-delegate,MIT OR Apache-2.0,"Godfrey Chan <godfreykfc@gmail.com>, Jakub Beránek <berykubik@gmail.com>"
 der,https://github.com/RustCrypto/formats/tree/master/der,Apache-2.0 OR MIT,RustCrypto Developers
 deranged,https://github.com/jhpratt/deranged,MIT OR Apache-2.0,Jacob Pratt <jacob@jhpratt.dev>
 derivative,https://github.com/mcarton/rust-derivative,MIT OR Apache-2.0,mcarton <cartonmartin+git@gmail.com>
@@ -299,6 +302,7 @@ flate2,https://github.com/rust-lang/flate2-rs,MIT OR Apache-2.0,"Alex Crichton <
 float_eq,https://github.com/jtempest/float_eq-rs,MIT OR Apache-2.0,jtempest
 fluent-uri,https://github.com/yescallop/fluent-uri-rs,MIT,Scallop Ye <yescallop@gmail.com>
 flume,https://github.com/zesterer/flume,Apache-2.0 OR MIT,Joshua Barretto <joshua.s.barretto@gmail.com>
+fluss-rs,https://github.com/apache/fluss-rust,Apache-2.0,Apache Fluss <dev@fluss.apache.org>
 fnv,https://github.com/servo/rust-fnv,Apache-2.0  OR  MIT,Alex Crichton <alex@alexcrichton.com>
 foldhash,https://github.com/orlp/foldhash,Zlib,Orson Peters <orsonpeters@gmail.com>
 foreign-types,https://github.com/sfackler/foreign-types,MIT OR Apache-2.0,Steven Fackler <sfackler@gmail.com>
@@ -580,6 +584,8 @@ parking,https://github.com/smol-rs/parking,Apache-2.0 OR MIT,"Stjepan Glavina <s
 parking_lot,https://github.com/Amanieu/parking_lot,MIT OR Apache-2.0,Amanieu d'Antras <amanieu@gmail.com>
 parking_lot_core,https://github.com/Amanieu/parking_lot,MIT OR Apache-2.0,Amanieu d'Antras <amanieu@gmail.com>
 parquet,https://github.com/apache/arrow-rs,Apache-2.0,Apache Arrow <dev@arrow.apache.org>
+parse-display,https://github.com/frozenlib/parse-display,MIT OR Apache-2.0,frozenlib
+parse-display-derive,https://github.com/frozenlib/parse-display,MIT OR Apache-2.0,frozenlib
 parse-size,https://github.com/kennytm/parse-size,MIT,kennytm <kennytm@gmail.com>
 pastey,https://github.com/as1100k/pastey,MIT OR Apache-2.0,"Aditya Kumar <git@adityais.dev>, David Tolnay <dtolnay@gmail.com>"
 pbkdf2,https://github.com/RustCrypto/password-hashes/tree/master/pbkdf2,MIT OR Apache-2.0,RustCrypto Developers
@@ -735,6 +741,7 @@ serde_bytes,https://github.com/serde-rs/bytes,MIT OR Apache-2.0,David Tolnay <dt
 serde_core,https://github.com/serde-rs/serde,MIT OR Apache-2.0,"Erick Tryzelaar <erick.tryzelaar@gmail.com>, David Tolnay <dtolnay@gmail.com>"
 serde_derive,https://github.com/serde-rs/serde,MIT OR Apache-2.0,"Erick Tryzelaar <erick.tryzelaar@gmail.com>, David Tolnay <dtolnay@gmail.com>"
 serde_derive_internals,https://github.com/serde-rs/serde,MIT OR Apache-2.0,"Erick Tryzelaar <erick.tryzelaar@gmail.com>, David Tolnay <dtolnay@gmail.com>"
+serde_fmt,https://github.com/KodrAus/serde_fmt,Apache-2.0 OR MIT,Ashley Mannix <ashleymannix@live.com.au>
 serde_json,https://github.com/serde-rs/json,MIT OR Apache-2.0,"Erick Tryzelaar <erick.tryzelaar@gmail.com>, David Tolnay <dtolnay@gmail.com>"
 serde_nanos,https://github.com/caspervonb/serde_nanos,MIT OR Apache-2.0,Casper Beyer <caspervonb@pm.me>
 serde_path_to_error,https://github.com/dtolnay/path-to-error,MIT OR Apache-2.0,David Tolnay <dtolnay@gmail.com>
@@ -787,10 +794,20 @@ stream-cancel,https://github.com/jonhoo/stream-cancel,MIT OR Apache-2.0,Jon Gjen
 stringprep,https://github.com/sfackler/rust-stringprep,MIT OR Apache-2.0,Steven Fackler <sfackler@gmail.com>
 strip-ansi-escapes,https://github.com/luser/strip-ansi-escapes,Apache-2.0 OR MIT,Ted Mielczarek <ted@mielczarek.org>
 strsim,https://github.com/rapidfuzz/strsim-rs,MIT,"Danny Guo <danny@dannyguo.com>, maxbachmann <oss@maxbachmann.de>"
+structmeta,https://github.com/frozenlib/structmeta,MIT OR Apache-2.0,frozenlib
+structmeta-derive,https://github.com/frozenlib/structmeta,MIT OR Apache-2.0,frozenlib
 strum,https://github.com/Peternator7/strum,MIT,Peter Glotfelty <peter.glotfelty@microsoft.com>
 strum_macros,https://github.com/Peternator7/strum,MIT,Peter Glotfelty <peter.glotfelty@microsoft.com>
 subtle,https://github.com/dalek-cryptography/subtle,BSD-3-Clause,"Isis Lovecruft <isis@patternsinthevoid.net>, Henry de Valence <hdevalence@hdevalence.ca>"
 supports-color,https://github.com/zkat/supports-color,Apache-2.0,Kat Marchán <kzm@zkat.tech>
+sval,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_buffer,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_dynamic,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_fmt,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_json,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_nested,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_ref,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
+sval_serde,https://github.com/sval-rs/sval,Apache-2.0 OR MIT,Ashley Mannix <hey@kodraus.com>
 syn,https://github.com/dtolnay/syn,MIT OR Apache-2.0,David Tolnay <dtolnay@gmail.com>
 sync_wrapper,https://github.com/Actyx/sync_wrapper,Apache-2.0,Actyx AG <developer@actyx.io>
 synstructure,https://github.com/mystor/synstructure,MIT,Nika Layzell <nika@thelayzells.com>
@@ -862,6 +879,7 @@ tungstenite,https://github.com/snapview/tungstenite-rs,MIT OR Apache-2.0,"Alexey
 twox-hash,https://github.com/shepmaster/twox-hash,MIT,Jake Goulding <jake.goulding@gmail.com>
 typed-builder,https://github.com/idanarye/rust-typed-builder,MIT OR Apache-2.0,"IdanArye <idanarye@gmail.com>, Chris Morgan <me@chrismorgan.info>"
 typed-builder-macro,https://github.com/idanarye/rust-typed-builder,MIT OR Apache-2.0,"IdanArye <idanarye@gmail.com>, Chris Morgan <me@chrismorgan.info>"
+typeid,https://github.com/dtolnay/typeid,MIT OR Apache-2.0,David Tolnay <dtolnay@gmail.com>
 typenum,https://github.com/paholg/typenum,MIT OR Apache-2.0,The typenum Authors
 typespec,https://github.com/azure/azure-sdk-for-rust,MIT,Microsoft
 typespec_client_core,https://github.com/azure/azure-sdk-for-rust,MIT,Microsoft
@@ -895,6 +913,9 @@ utf8parse,https://github.com/alacritty/vte,Apache-2.0 OR MIT,"Joe Wilm <joe@jwil
 uuid,https://github.com/uuid-rs/uuid,Apache-2.0 OR MIT,"Ashley Mannix<ashleymannix@live.com.au>, Dylan DPC<dylan.dpc@gmail.com>, Hunar Roop Kahlon<hunar.roop@gmail.com>"
 uuid-simd,https://github.com/Nugine/simd,MIT,The uuid-simd Authors
 valuable,https://github.com/tokio-rs/valuable,MIT,The valuable Authors
+value-bag,https://github.com/sval-rs/value-bag,Apache-2.0 OR MIT,Ashley Mannix <ashleymannix@live.com.au>
+value-bag-serde1,https://github.com/sval-rs/value-bag,Apache-2.0 OR MIT,Ashley Mannix <ashleymannix@live.com.au>
+value-bag-sval2,https://github.com/sval-rs/value-bag,Apache-2.0 OR MIT,Ashley Mannix <ashleymannix@live.com.au>
 vrl,https://github.com/vectordotdev/vrl,MPL-2.0,Vector Contributors <vector@datadoghq.com>
 vsimd,https://github.com/Nugine/simd,MIT,The vsimd Authors
 vte,https://github.com/alacritty/vte,Apache-2.0 OR MIT,"Joe Wilm <joe@jwilm.com>, Christian Duerr <contact@christianduerr.com>"

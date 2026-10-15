@@ -470,6 +470,7 @@ openssl = { version = "0.10.73", default-features = false, features = ["vendored
 openssl-probe = { version = "0.1.6", default-features = false }
 ordered-float.workspace = true
 percent-encoding = { version = "2.3.1", default-features = false }
+fluss-rs = { git = "https://github.com/apache/fluss-rust.git", rev = "a10c37e1de044e148f31a8a78aab032574220720", optional = true }
 postgres-openssl = { version = "0.5.1", default-features = false, features = ["runtime"], optional = true }
 pulsar = { version = "6.7.0", default-features = false, features = ["tokio-runtime", "auth-oauth2", "flate2", "lz4", "snap", "zstd"], optional = true }
 quick-junit = { version = "0.6.0" }
@@ -916,6 +917,7 @@ sinks-logs = [
   "sinks-doris",
   "sinks-elasticsearch",
   "sinks-file",
+  "sinks-fluss",
   "sinks-gcp",
   "sinks-greptimedb_logs",
   "sinks-honeycomb",
@@ -985,6 +987,7 @@ sinks-datadog_traces = ["protobuf-build", "dep:datadog-proto", "dep:prost", "dep
 sinks-doris = ["sqlx/mysql"]
 sinks-elasticsearch = ["transforms-metric_to_log"]
 sinks-file = ["dep:async-compression"]
+sinks-fluss = ["dep:fluss-rs"]
 sinks-gcp = ["sinks-gcp-chronicle", "dep:base64", "gcp"]
 sinks-gcp-chronicle = ["gcp"]
 sinks-greptimedb_metrics = ["dep:greptimedb-ingester"]
